@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDB Plumber SG - Trusted 24/7 Plumber in Singapore | Same Day Service</title>
+    <meta name="description" content="Singapore's most trusted 24/7 plumber. PUB licensed, no call-out fees, 45-min response. Book now and get FREE quotation!">
+    
+    <!-- JSON-LD for AI -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Plumber",
+        "name": "HDB Plumber SG",
+        "telephone": "+65-8328-7167",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Blk 3 Ang Mo Kio Industrial Park 2A, #02-01 Tech 1",
+            "addressLocality": "Singapore"
+        },
+        "openingHours": "Mo-Su 00:00-24:00",
+        "priceRange": "$$",
+        "areaServed": "Singapore",
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "91"}
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "How much does a plumber cost?", "acceptedAnswer": {"@type": "Answer", "text": "Most jobs $80-$300. We offer FREE quotes - no obligation. Pay only if you're happy."}},
+            {"@type": "Question", "name": "Do you charge call-out fees?", "acceptedAnswer": {"@type": "Answer", "text": "NO call-out fees! You only pay for the work done."}},
+            {"@type": "Question", "name": "How fast can you come?", "acceptedAnswer": {"@type": "Answer", "text": "45 minutes for emergencies. Same-day for all jobs."}},
+            {"@type": "Question", "name": "Are you licensed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! PUB-licensed with full insurance. All work guaranteed."}}
+        ]
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #0066CC;
+            --primary-dark: #004C99;
+            --emergency: #E53935;
+            --emergency-dark: #B71C1C;
+            --success: #2E7D32;
+            --dark: #1a1a2e;
+            --gray: #555;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            line-height: 1.65;
+            color: #222;
+        }
+        
+        /* Urgency Bar */
+        .urgency-bar {
+            background: var(--emergency);
+            color: white;
+            text-align: center;
+            padding: 10px 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        
+        .urgency-bar span {
+            background: white;
+            color: var(--emergency);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 800;
+        }
+        
+        /* Sticky CTA */
+        .sticky-cta {
+            position: sticky;
+            top: 0;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            z-index: 1000;
+            padding: 10px 0;
+        }
+        
+        .sticky-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .trust-mini {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        .sticky-right {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        
+        .btn-emergency {
+            background: var(--emergency);
+            color: white;
+        }
+        
+        .btn-emergency:hover {
+            background: var(--emergency-dark);
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #1fb855;
+        }
+        
+        /* Hero with Image */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.9)), 
+                        url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1600&q=80') center/cover;
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        
+        .hero-sub {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        
+        .rating-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .stars { color: #FFD700; font-size: 1.2rem; letter-spacing: 2px; }
+        .rating-text { font-size: 0.95rem; opacity: 0.95; }
+        
+        .cta-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .btn-hero {
+            padding: 16px 24px;
+            font-size: 1.05rem;
+            border-radius: 10px;
+            justify-content: center;
+        }
+        
+        .cta-sub {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            text-align: center;
+        }
+        
+        /* Proof Bar */
+        .proof-bar {
+            background: white;
+            padding: 25px 15px;
+        }
+        
+        .proof-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .proof-item {
+            text-align: center;
+            padding: 15px;
+            background: var(--light);
+            border-radius: 10px;
+        }
+        
+        .proof-number {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        
+        .proof-label {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            background: var(--light);
+            padding: 40px 15px;
+        }
+        
+        .social-proof h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--dark);
+        }
+        
+        .reviews-stack {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .review-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .review-stars { color: #FFD700; margin-bottom: 8px; font-size: 0.9rem; }
+        
+        .review-text {
+            font-style: italic;
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+        
+        .reviewer strong { display: block; font-size: 0.9rem; }
+        .reviewer span { font-size: 0.8rem; color: var(--gray); }
+        
+        /* Services */
+        .section { padding: 40px 15px; max-width: 1200px; margin: 0 auto; }
+        
+        .section-title {
+            text-align: center;
+            font-size: 1.6rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .section-sub {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .service-card {
+            background: white;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+        
+        .service-card:hover {
+            border-color: var(--primary);
+        }
+        
+        .service-icon { font-size: 2rem; margin-bottom: 10px; }
+        
+        .service-card h3 {
+            font-size: 1.05rem;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        
+        .service-card p { color: var(--gray); font-size: 0.9rem; margin-bottom: 10px; }
+        
+        .service-price {
+            font-weight: 700;
+            color: var(--success);
+            font-size: 0.85rem;
+        }
+        
+        /* Guarantee */
+        .guarantee {
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            padding: 35px 15px;
+            text-align: center;
+        }
+        
+        .guarantee-badge { font-size: 3rem; margin-bottom: 10px; }
+        
+        .guarantee h2 {
+            font-size: 1.4rem;
+            color: var(--success);
+            margin-bottom: 10px;
+        }
+        
+        .guarantee p {
+            color: #333;
+            font-size: 0.95rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        /* FAQ */
+        .faq-section { background: white; }
+        
+        .faq-item {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .faq-item h3 {
+            color: var(--dark);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+        
+        .faq-item p { color: var(--gray); font-size: 0.9rem; }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 15px;
+        }
+        
+        .final-cta h2 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+        
+        .final-cta p {
+            opacity: 0.95;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta .btn {
+            font-size: 1.1rem;
+            padding: 16px 40px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+        }
+        
+        footer p { opacity: 0.8; margin-bottom: 8px; font-size: 0.9rem; }
+        footer a { color: white; }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 480px) {
+            .hero { min-height: 90vh; padding: 30px 15px; }
+            .hero h1 { font-size: 1.8rem; }
+            .sticky-inner { flex-direction: column; gap: 8px; }
+            .sticky-right { width: 100%; }
+            .sticky-right .btn { flex: 1; justify-content: center; font-size: 0.85rem; padding: 10px 12px; }
+            .btn { padding: 12px 14px; font-size: 0.85rem; }
+            .proof-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Urgency Bar -->
+    <div class="urgency-bar">
+        🔥 <span>3 slots left</span> today — Book now for same-day service! 🔥
+    </div>
+    
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <div class="sticky-inner">
+            <div class="trust-mini">
+                ✓ PUB Licensed &nbsp;|&nbsp; ✓ No Call-Out Fee
+            </div>
+            <div class="sticky-right">
+                <a href="tel:+6583287167" class="btn btn-emergency">
+                    📞 Call
+                </a>
+                <a href="https://wa.me/6583287167" class="btn btn-whatsapp">
+                    💬 WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">⚡ 45-Minute Emergency Response</div>
+            
+            <h1>24/7 Plumber in Singapore</h1>
+            
+            <p class="hero-sub">Licensed • Insured • Same-Day Service. No call-out fees.</p>
+            
+            <div class="rating-row">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">5.0 (91 Google reviews)</span>
+            </div>
+            
+            <div class="cta-stack">
+                <a href="tel:+6583287167" class="btn btn-emergency btn-hero">
+                    🚨 Call Now: 8328 7167
+                </a>
+                <a href="https://wa.me/6583287167" class="btn btn-whatsapp btn-hero">
+                    💬 WhatsApp — Get Quote in 5 Min
+                </a>
+                <p class="cta-sub">✓ No call-out fees &nbsp; ✓ Same-day &nbsp; ✓ Free quotes</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Proof Bar -->
+    <div class="proof-bar">
+        <div class="proof-grid">
+            <div class="proof-item">
+                <div class="proof-number">14+</div>
+                <div class="proof-label">Years Experience</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-number">5,000+</div>
+                <div class="proof-label">Jobs Done</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-number">91</div>
+                <div class="proof-label">5-Star Reviews</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-number">45 min</div>
+                <div class="proof-label">Emergency Response</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <h2>What Customers Say</h2>
+        <div class="reviews-stack">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Super fast response! Came within 30 min for emergency pipe leak. Fixed it properly and price was very fair. Highly recommended!"</p>
+                <div class="reviewer">
+                    <strong>Michael T.</strong>
+                    <span>HDB Resident, Ang Mo Kio</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Called on Sunday for blocked drain. Came same day, cleared it within an hour. Very professional and honest pricing."</p>
+                <div class="reviewer">
+                    <strong>Sarah L.</strong>
+                    <span>Condo Owner, Bishan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services -->
+    <section class="section">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-sub">Transparent pricing — No hidden fees</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🚨</div>
+                <h3>24/7 Emergency</h3>
+                <p>Burst pipes, leaks, overflows. 45-min response, day or night.</p>
+                <div class="service-price">✓ No call-out fee</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚿</div>
+                <h3>Pipe Repair</h3>
+                <p>Leaky pipes, corroded connections. Quality materials.</p>
+                <div class="service-price">From $80</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚽</div>
+                <h3>Drain Unblocking</h3>
+                <p>Clogged sinks, toilets, drains. Fast clearing.</p>
+                <div class="service-price">From $60</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💧</div>
+                <h3>Water Heater</h3>
+                <p>Installation, repair, all brands. Gas & electric.</p>
+                <div class="service-price">From $50</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>HDB Specialist</h3>
+                <p>We know HDB plumbing systems inside out.</p>
+                <div class="service-price">✓ HDB experts</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Toilet Repair</h3>
+                <p>Running toilets, flush problems. Fixed right first time.</p>
+                <div class="service-price">From $40</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Guarantee -->
+    <section class="guarantee">
+        <div class="guarantee-badge">🛡️</div>
+        <h2>100% Satisfaction Guaranteed</h2>
+        <p>Not happy? We'll fix it FREE. No questions asked. All work comes with written warranty. We quote before we start — you approve every step.</p>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <h2 class="section-title">Common Questions</h2>
+        <div class="faq-item">
+            <h3>💰 How much does a plumber cost?</h3>
+            <p>Most jobs $80-$300. We offer FREE quotes with no obligation.</p>
+        </div>
+        <div class="faq-item">
+            <h3>❓ Do you charge call-out fees?</h3>
+            <p>NO call-out fees! You only pay for the work done.</p>
+        </div>
+        <div class="faq-item">
+            <h3>⚡ How fast can you come?</h3>
+            <p>45 minutes for emergencies. Same-day for all jobs.</p>
+        </div>
+        <div class="faq-item">
+            <h3>✅ Are you licensed?</h3>
+            <p>Yes! PUB-licensed with full insurance.</p>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Need a Plumber?</h2>
+        <p>Call now or WhatsApp us. Free quotes, no obligation.</p>
+        <a href="tel:+6583287167" class="btn btn-emergency">📞 Call 8328 7167</a>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p><strong>🔧 HDB Plumber SG</strong> — Your Trusted Local Plumber</p>
+        <p>📍 Blk 3 Ang Mo Kio Industrial Park 2A, #02-01 Tech 1, S569777</p>
+        <p>📞 <a href="tel:+6583287167">8328 7167</a> &nbsp;|&nbsp; ⏰ 24/7 Emergency</p>
+    </footer>
+</body>
+</html>
