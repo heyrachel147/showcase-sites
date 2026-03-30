@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDB Plumber SG - Professional Plumbing Services in Singapore</title>
+    <meta name="description" content="Trusted local plumber in Singapore. 24/7 emergency service, licensed & insured. Schedule online or call today!">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #0066CC;
+            --primary-dark: #004C99;
+            --emergency: #E53935;
+            --success: #2E7D32;
+            --dark: #222;
+            --gray: #666;
+            --light: #f5f7fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        a { text-decoration: none; color: inherit; }
+        
+        /* Header */
+        .header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        
+        .logo span { color: var(--emergency); }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .phone {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover { background: var(--primary-dark); }
+        
+        .btn-emergency {
+            background: var(--emergency);
+            color: white;
+        }
+        
+        .btn-emergency:hover { background: #c62828; }
+        
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0,51,102,0.88), rgba(0,51,102,0.92)), 
+                        url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1800&q=80') center/cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--emergency);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .hero-sub {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero .btn { padding: 16px 32px; font-size: 1rem; }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--primary);
+            color: white;
+            padding: 25px 20px;
+        }
+        
+        .stats-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        /* Services */
+        .services {
+            padding: 70px 20px;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+        
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,102,204,0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-link {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Why Choose */
+        .why-section {
+            padding: 70px 20px;
+            background: var(--light);
+        }
+        
+        .why-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .why-item {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+        
+        .why-content h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .why-content p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* CTA */
+        .cta-section {
+            background: var(--primary);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            opacity: 0.95;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 20px 30px;
+        }
+        
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .footer ul {
+            list-style: none;
+        }
+        
+        .footer li {
+            margin-bottom: 10px;
+        }
+        
+        .footer a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        
+        .footer a:hover { color: white; }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; gap: 15px; }
+            .hero h1 { font-size: 2rem; }
+            .hero-cta { flex-direction: column; }
+            .hero .btn { width: 100%; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .section-header h2 { font-size: 1.7rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .header-right { flex-direction: column; width: 100%; }
+            .btn { width: 100%; text-align: center; }
+            .hero { padding: 50px 15px; }
+            .hero h1 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="#" class="logo">HDB <span>Plumber</span></a>
+            <div class="header-right">
+                <a href="tel:+6583287167" class="phone">
+                    📞 8328 7167
+                </a>
+                <a href="https://wa.me/6583287167" class="btn btn-primary">Schedule Online</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">24/7 Emergency Service Available</div>
+            <h1>Professional Plumbing Services in Singapore</h1>
+            <p class="hero-sub">Licensed, insured & trusted by thousands of Singapore homeowners. Fast, reliable service with upfront pricing.</p>
+            <div class="hero-cta">
+                <a href="tel:+6583287167" class="btn btn-emergency">📞 Call Now: 8328 7167</a>
+                <a href="https://wa.me/6583287167" class="btn btn-outline" style="border-color: white; color: white;">Schedule Online</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats -->
+    <div class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat">
+                <div class="stat-number">14+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5,000+</div>
+                <div class="stat-label">Jobs Completed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">91</div>
+                <div class="stat-label">5-Star Reviews</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">45min</div>
+                <div class="stat-label">Response Time</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Services -->
+    <section class="services">
+        <div class="section-header">
+            <h2>Our Plumbing Services</h2>
+            <p>Comprehensive solutions for all your plumbing needs</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🚨</div>
+                <h3>24/7 Emergency Plumbing</h3>
+                <p>Burst pipes, severe leaks, overflows & flooding. Our emergency team arrives fast, day or night.</p>
+                <a href="tel:+6583287167" class="service-link">Call Now →</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🚿</div>
+                <h3>Drain Cleaning & Unblocking</h3>
+                <p>Clogged sinks, toilets, showers & floor drains. Professional equipment for fast clearing.</p>
+                <a href="tel:+6583287167" class="service-link">Call Now →</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">💧</div>
+                <h3>Water Heater Services</h3>
+                <p>Installation, repair & replacement of all water heater brands. Gas, electric & instant heaters.</p>
+                <a href="tel:+6583287167" class="service-link">Call Now →</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Pipe Repair & Replacement</h3>
+                <p>Leaky pipes, corroded connections, pipe bursts. Quality materials that last.</p>
+                <a href="tel:+6583287167" class="service-link">Call Now →</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🚽</div>
+                <h3>Toilet Repair & Installation</h3>
+                <p>Running toilets, flush problems, leaks, new installations. All brands & models.</p>
+                <a href="tel:+6583287167" class="service-link">Call Now →</a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>HDB Plumbing Specialist</h3>
+                <p>We know HDB plumbing systems. Experts in common HDB issues & solutions.</p>
+                <a href="tel:+6583287167" class="service-link">Call Now →</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Choose -->
+    <section class="why-section">
+        <div class="section-header">
+            <h2>Why Choose Us</h2>
+            <p>Trusted by thousands of Singapore homeowners</p>
+        </div>
+        
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-icon">✓</div>
+                <div class="why-content">
+                    <h4>Licensed & Insured</h4>
+                    <p>PUB-licensed plumber with full insurance coverage</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">✓</div>
+                <div class="why-content">
+                    <h4>Upfront Pricing</h4>
+                    <p>We quote before work starts. No hidden fees, no surprises.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">✓</div>
+                <div class="why-content">
+                    <h4>Fast Response</h4>
+                    <p>45-minute response for emergencies. Same-day service for all jobs.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">✓</div>
+                <div class="why-content">
+                    <h4>Satisfaction Guaranteed</h4>
+                    <p>100% satisfaction guarantee on all work. We stand behind our service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to Get Started?</h2>
+        <p>Call now or schedule online. Free quotes available.</p>
+        <a href="tel:+6583287167" class="btn btn-emergency">📞 Call 8328 7167</a>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h4>HDB Plumber SG</h4>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Your trusted local plumber in Singapore. Licensed, insured & reliable.</p>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Emergency Plumbing</a></li>
+                    <li><a href="#">Drain Cleaning</a></li>
+                    <li><a href="#">Water Heater</a></li>
+                    <li><a href="#">Pipe Repair</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Service Areas</h4>
+                <ul>
+                    <li><a href="#">All Singapore</a></li>
+                    <li><a href="#">HDB Estates</a></li>
+                    <li><a href="#">Condos</a></li>
+                    <li><a href="#">Landed Properties</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li>📞 <a href="tel:+6583287167">8328 7167</a></li>
+                    <li>📍 Ang Mo Kio, Singapore</li>
+                    <li>⏰ 24/7 Emergency</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 HDB Plumber SG. All rights reserved. | PUB Licensed Plumber</p>
+        </div>
+    </footer>
+</body>
+</html>
