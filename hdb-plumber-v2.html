@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDB Plumber SG - Trusted 24/7 Plumber in Singapore</title>
+    <meta name="description" content="HDB Plumber SG - Licensed plumber in Singapore. 24/7 emergency service, transparent pricing, no hidden fees. Call now for fast, reliable plumbing solutions.">
+    
+    <!-- JSON-LD for AI -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Plumber",
+        "name": "HDB Plumber SG",
+        "telephone": "+65-8328-7167",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Blk 3 Ang Mo Kio Industrial Park 2A, #02-01 Tech 1",
+            "addressLocality": "Singapore",
+            "postalCode": "569777"
+        },
+        "openingHours": "Mo-Su 00:00-24:00",
+        "priceRange": "$$",
+        "areaServed": "Singapore",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "91"
+        }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "How much does a plumber cost in Singapore?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most jobs cost $80-$300. We offer FREE quotations with transparent pricing - no hidden fees."
+            }
+        }, {
+            "@type": "Question", 
+            "name": "Do you offer emergency services?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! 24/7 emergency plumbing. We arrive within 45 minutes for urgent calls."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Are you licensed?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! PUB-licensed plumber. All work is insured and comes with warranty."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Do you serve HDB flats?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! We specialize in HDB plumbing - we know common HDB pipe systems and issues."
+            }
+        }]
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #0066CC;
+            --primary-dark: #004C99;
+            --emergency: #E53935;
+            --emergency-dark: #C62828;
+            --success: #43A047;
+            --dark: #1a1a2e;
+            --gray: #666;
+            --light-gray: #f5f5f5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        /* Sticky Header */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .header-phone svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 25px;
+        }
+        
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-bottom: 25px;
+        }
+        
+        .stars { color: #FFD700; font-size: 1.2rem; }
+        
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-emergency {
+            background: var(--emergency);
+            color: white;
+            box-shadow: 0 4px 20px rgba(229, 57, 53, 0.4);
+        }
+        
+        .btn-emergency:hover {
+            background: var(--emergency-dark);
+            box-shadow: 0 6px 25px rgba(229, 57, 53, 0.5);
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--light-gray);
+            padding: 25px 20px;
+        }
+        
+        .trust-items {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .trust-item svg {
+            width: 24px;
+            height: 24px;
+            color: var(--success);
+        }
+        
+        /* Services */
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 40px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .service-card {
+            background: white;
+            border: 2px solid #eee;
+            border-radius: 16px;
+            padding: 30px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        .service-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 20px rgba(0,102,204,0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Why Choose Us */
+        .why-us {
+            background: var(--light-gray);
+            padding: 60px 20px;
+        }
+        
+        .why-us .section-title {
+            margin-bottom: 50px;
+        }
+        
+        .why-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .why-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .why-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .why-text h4 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+        
+        .why-text p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .faq-item h3 {
+            color: var(--dark);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .faq-item p {
+            color: var(--gray);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            opacity: 0.9;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        footer a {
+            color: white;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .header-content { flex-direction: column; gap: 10px; }
+            .trust-items { flex-direction: column; gap: 15px; align-items: center; }
+            .cta-group { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+            .sticky-header { position: relative; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="header-content">
+            <div class="logo">🔧 HDB Plumber SG</div>
+            <a href="tel:+6583287167" class="header-phone">
+                <svg fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                8328 7167
+            </a>
+        </div>
+    </header>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>24/7 Emergency Plumber in Singapore</h1>
+            <p class="hero-subtitle">Licensed • Insured • Same-Day Service</p>
+            
+            <div class="rating-badge">
+                <span class="stars">★★★★★</span>
+                <span>5.0 from 91 reviews</span>
+            </div>
+            
+            <div class="cta-group">
+                <a href="tel:+6583287167" class="btn btn-emergency">
+                    🚨 Call Now - 8328 7167
+                </a>
+                <a href="https://wa.me/6583287167" class="btn btn-primary">
+                    💬 WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-items">
+            <div class="trust-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                PUB Licensed
+            </div>
+            <div class="trust-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                No Hidden Fees
+            </div>
+            <div class="trust-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                24/7 Available
+            </div>
+            <div class="trust-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                45-Min Response
+            </div>
+        </div>
+    </div>
+    
+    <!-- Services -->
+    <section class="section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🚨</div>
+                <h3>24/7 Emergency Plumbing</h3>
+                <p>Burst pipes, severe leaks, overflows - we arrive fast, day or night. 45-minute response for urgent calls.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚿</div>
+                <h3>Pipe Repair & Replacement</h3>
+                <p>Leaky pipes, corroded connections, burst pipes. We use quality materials that last.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚽</div>
+                <h3>Drain Unblocking</h3>
+                <p>Clogged sinks, toilets, floor drains. Fast clearing with no damage to your pipes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💧</div>
+                <h3>Water Heater Services</h3>
+                <p>Installation, repair, and replacement of all water heater brands. Gas and electric.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>HDB Specialist</h3>
+                <p>We know HDB plumbing systems inside out. Common issues, quick fixes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Toilet Repair</h3>
+                <p>Running toilets, flush problems, leaks. We fix it properly the first time.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <h2 class="section-title">Why Singaporeans Choose Us</h2>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-icon">✓</div>
+                <div class="why-text">
+                    <h4>Transparent Pricing</h4>
+                    <p>We quote before work starts. No surprises, no hidden fees. You approve every step.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">✓</div>
+                <div class="why-text">
+                    <h4>Licensed & Insured</h4>
+                    <p>PUB-licensed plumber. All work is insured and comes with written warranty.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">✓</div>
+                <div class="why-text">
+                    <h4>Fast Response</h4>
+                    <p>45 minutes for emergency calls. Same-day service for all jobs.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">✓</div>
+                <div class="why-text">
+                    <h4>HDB Specialists</h4>
+                    <p>We know HDB plumbing. Years of experience with common HDB issues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="section">
+        <h2 class="section-title">Common Questions</h2>
+        <div class="faq-item">
+            <h3>How much does a plumber cost in Singapore?</h3>
+            <p>Most jobs cost $80-$300 depending on complexity. We offer FREE quotations with transparent pricing - you'll know the cost before we start.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you offer emergency services?</h3>
+            <p>Yes! 24/7 emergency plumbing. We arrive within 45 minutes for urgent calls. Emergency call-out fees apply.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Are you licensed?</h3>
+            <p>Yes! We are PUB-licensed plumbers. All work is insured and comes with warranty.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you serve HDB flats?</h3>
+            <p>Yes! We specialize in HDB plumbing. We know common HDB pipe systems and fix issues quickly.</p>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Need a Plumber Right Now?</h2>
+        <p>Call now for immediate assistance. No job too big or too small.</p>
+        <a href="tel:+6583287167" class="btn btn-emergency">📞 Call 8328 7167</a>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p><strong>HDB Plumber SG</strong> - Your Trusted Local Plumber</p>
+        <p>📍 Blk 3 Ang Mo Kio Industrial Park 2A, #02-01 Tech 1, Singapore 569777</p>
+        <p>📞 <a href="tel:+6583287167">8328 7167</a> | ⏰ 24/7 Emergency Service</p>
+        <p style="margin-top: 20px; font-size: 0.85rem;">© 2024 HDB Plumber SG. All rights reserved.</p>
+    </footer>
+</body>
+</html>
