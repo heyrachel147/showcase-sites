@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Business Name] — Aircon Services Singapore</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f4f8; }
+        .container { max-width: 520px; margin: 0 auto; background: white; min-height: 100vh; }
+        
+        /* HERO */
+        .hero { background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%); color: white; padding: 40px 24px; text-align: center; }
+        .hero-emoji { font-size: 56px; margin-bottom: 12px; }
+        .hero h1 { font-size: 26px; margin-bottom: 8px; }
+        .hero p { opacity: 0.9; font-size: 15px; line-height: 1.5; }
+        .hero-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 20px; font-size: 13px; margin-top: 14px; }
+        
+        /* QUICK CONTACT */
+        .contact-bar { display: flex; background: #1a1a2e; }
+        .contact-btn { flex: 1; padding: 16px; text-align: center; color: white; text-decoration: none; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .contact-btn:first-child { border-right: 1px solid rgba(255,255,255,0.2); }
+        .contact-btn:hover { background: #2a2a4e; }
+        
+        /* SERVICES */
+        .section { padding: 24px; border-bottom: 1px solid #f0f0f0; }
+        .section-title { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 16px; font-weight: 600; }
+        
+        .service { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid #f5f5f5; }
+        .service:last-child { border-bottom: none; }
+        .service-icon { width: 44px; height: 44px; background: #e0f7fa; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+        .service-info { flex: 1; }
+        .service-name { font-size: 15px; font-weight: 600; color: #333; margin-bottom: 2px; }
+        .service-price { font-size: 13px; color: #0077b6; font-weight: 600; }
+        .service-desc { font-size: 13px; color: #888; }
+        
+        /* WHY US */
+        .why-item { display: flex; gap: 12px; padding: 12px 0; }
+        .why-icon { font-size: 20px; }
+        .why-text { font-size: 14px; color: #444; line-height: 1.5; }
+        .why-text strong { color: #1a1a2e; }
+        
+        /* REVIEWS */
+        .review { background: #f8f9fa; border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+        .review-stars { color: #ffc107; font-size: 16px; margin-bottom: 6px; }
+        .review-text { font-size: 14px; color: #444; line-height: 1.5; margin-bottom: 8px; }
+        .review-author { font-size: 12px; color: #888; }
+        .review-google { font-size: 11px; color: #4285f4; font-weight: 600; }
+        
+        /* CTA */
+        .cta-section { padding: 28px 24px; background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%); text-align: center; color: white; }
+        .cta-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .cta-sub { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
+        .cta-btn { display: block; width: 100%; padding: 16px; background: white; color: #0077b6; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; text-decoration: none; }
+        
+        /* FOOTER */
+        .footer { padding: 20px; text-align: center; font-size: 12px; color: #888; }
+        .footer-area { margin-top: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO -->
+        <div class="hero">
+            <div class="hero-emoji">❄️</div>
+            <h1>[Business Name]</h1>
+            <p>Professional aircon servicing, repair & installation across Singapore. Trusted by 500+ homes.</p>
+            <span class="hero-badge">📍 Serving [Area/Neighborhood]</span>
+        </div>
+        
+        <!-- CONTACT BAR -->
+        <div class="contact-bar">
+            <a href="tel:+658XXXXXXXX" class="contact-btn">📞 Call Now</a>
+            <a href="https://wa.me/65XXXXXXXX" class="contact-btn">💬 WhatsApp</a>
+        </div>
+        
+        <!-- SERVICES -->
+        <div class="section">
+            <div class="section-title">Our Services</div>
+            
+            <div class="service">
+                <div class="service-icon">🧹</div>
+                <div class="service-info">
+                    <div class="service-name">General Servicing</div>
+                    <div class="service-price">From $16/unit</div>
+                    <div class="service-desc">Chemical wash, filter cleaning, full checkup</div>
+                </div>
+            </div>
+            
+            <div class="service">
+                <div class="service-icon">🔧</div>
+                <div class="service-info">
+                    <div class="service-name">Aircon Repair</div>
+                    <div class="service-price">From $40</div>
+                    <div class="service-desc">Not cooling? Leak? Noise? We fix it fast.</div>
+                </div>
+            </div>
+            
+            <div class="service">
+                <div class="service-icon">📦</div>
+                <div class="service-info">
+                    <div class="service-name">Chemical Overhaul</div>
+                    <div class="service-price">From $70/unit</div>
+                    <div class="service-desc">Deep clean for units not serviced in 6+ months</div>
+                </div>
+            </div>
+            
+            <div class="service">
+                <div class="service-icon">🏠</div>
+                <div class="service-info">
+                    <div class="service-name">Installation & Relocation</div>
+                    <div class="service-price">From $80/unit</div>
+                    <div class="service-desc">New install, relocate existing, gas top-up</div>
+                </div>
+            </div>
+            
+            <div class="service">
+                <div class="service-icon">🏢</div>
+                <div class="service-info">
+                    <div class="service-name">Commercial & Office</div>
+                    <div class="service-price">Custom quote</div>
+                    <div class="service-desc">Regular maintenance contracts for businesses</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- WHY US -->
+        <div class="section">
+            <div class="section-title">Why Choose Us</div>
+            
+            <div class="why-item">
+                <div class="why-icon">⚡</div>
+                <div class="why-text"><strong>Same-day service</strong> — Book before 12pm, we come today</div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">💰</div>
+                <div class="why-text"><strong>No hidden fees</strong> — Price quoted is price you pay</div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">✅</div>
+                <div class="why-text"><strong>Licensed technicians</strong> — All work guaranteed</div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">🏠</div>
+                <div class="why-text"><strong>HDB & condo specialists</strong> — We know Singapore homes</div>
+            </div>
+        </div>
+        
+        <!-- REVIEWS -->
+        <div class="section">
+            <div class="section-title">What Customers Say</div>
+            
+            <div class="review">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"Super fast response. Booked at 9am, aircon fixed by 2pm. Will use again!"</div>
+                <div class="review-author">— Sarah M., Bishan</div>
+                <div class="review-google">✓ Verified on Google</div>
+            </div>
+            
+            <div class="review">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"Chemical wash was thorough. My old aircon runs like new. Price was honest too."</div>
+                <div class="review-author">— David L., Jurong West</div>
+                <div class="review-google">✓ Verified on Google</div>
+            </div>
+            
+            <div class="review">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"Finally an aircon service that doesn't overcharge. No upselling, just honest work."</div>
+                <div class="review-author">— Priya K., Tampines</div>
+                <div class="review-google">✓ Verified on Google</div>
+            </div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="cta-section">
+            <div class="cta-title">Book Your Service Today</div>
+            <div class="cta-sub">Same-day availability. No call-out fee.</div>
+            <a href="https://wa.me/65XXXXXXXX?text=Hi%2C%20I%20need%20aircon%20servicing%20for%20my%20home" class="cta-btn">💬 Message on WhatsApp →</a>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="footer">
+            [Business Name]<br>
+            📞 [Phone Number]<br>
+            📍 Serving all Singapore<br>
+            <div class="footer-area">HDB · Condo · Landed · Commercial</div>
+        </div>
+    </div>
+</body>
+</html>
