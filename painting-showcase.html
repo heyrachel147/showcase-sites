@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Paint Singapore - Professional Painting Services</title>
+    <meta name="description" content="Swift Paint Singapore - Trusted interior & exterior painting. HDB, condo, house painting. Free quotes. Call +65 8345 6789">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
+        .hero { background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); color: white; padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; color: #fff; }
+        .hero .subtitle { font-size: 1.3rem; opacity: 0.9; margin-bottom: 5px; }
+        .hero .badge { display: inline-block; background: #27ae60; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin-top: 10px; }
+        .cta-button { display: inline-block; background: #27ae60; color: white; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; margin-top: 25px; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(39,174,96,0.3); }
+        .cta-button:hover { transform: scale(1.05); }
+        .whatsapp-btn { background: #25d366; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin: 40px 0; }
+        .service-card { background: #f8f9fa; padding: 30px; border-radius: 16px; text-align: center; transition: transform 0.2s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .service-card h3 { color: #2c3e50; margin-bottom: 10px; font-size: 1.3rem; }
+        .service-card .emoji { font-size: 3rem; margin-bottom: 15px; }
+        .trust { background: linear-gradient(135deg, #ebf5fb 0%, #d4e6f1 100%); padding: 50px 20px; text-align: center; margin: 40px 0; border-radius: 20px; }
+        .trust h2 { color: #2c3e50; margin-bottom: 20px; font-size: 1.8rem; }
+        .trust .stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 30px; }
+        .trust .stat { text-align: center; }
+        .trust .stat .number { font-size: 2.5rem; font-weight: bold; color: #3498db; }
+        .trust .stat .label { font-size: 0.9rem; color: #555; }
+        .pricing { text-align: center; padding: 60px 20px; background: #f8f9fa; margin: 40px 0; border-radius: 20px; }
+        .pricing h2 { margin-bottom: 30px; color: #2c3e50; }
+        .pricing-card { background: white; border-radius: 16px; padding: 40px; max-width: 400px; margin: 20px auto; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+        .pricing-card .price { font-size: 3rem; font-weight: bold; color: #27ae60; }
+        .pricing-card .period { color: #888; font-size: 1rem; }
+        .pricing-card ul { list-style: none; margin: 20px 0; text-align: left; }
+        .pricing-card li { padding: 8px 0; border-bottom: 1px solid #eee; }
+        .pricing-card li::before { content: "✅ "; }
+        .contact { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); color: white; }
+        .contact h2 { margin-bottom: 30px; font-size: 2rem; }
+        .contact-info { font-size: 1.3rem; margin: 15px 0; }
+        footer { background: #1a252f; color: white; text-align: center; padding: 30px; }
+        @media (max-width: 600px) { .hero h1 { font-size: 2rem; } .trust .stats { gap: 20px; } }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Swift Paint Singapore</h1>
+        <p class="subtitle">🎨 Your Trusted Painting Partner</p>
+        <p class="subtitle">Serving HDB, Condos & Homes Across Singapore</p>
+        <span class="badge">✅ 5-Year Workmanship Warranty</span><br>
+        <a href="https://wa.me/6583456789?text=Hi!%20I%27d%20like%20to%20get%20a%20painting%20quote" class="cta-button whatsapp-btn">💬 WhatsApp Us Now</a><br>
+        <a href="tel:+6583456789" class="cta-button" style="background:#2c3e50;box-shadow:none;">📞 +65 8345 6789</a>
+    </div>
+    
+    <div class="container">
+        <div class="trust">
+            <h2>🏆 Why 600+ Singapore Homes Trust Us</h2>
+            <div class="stats">
+                <div class="stat"><div class="number">600+</div><div class="label">Homes Painted</div></div>
+                <div class="stat"><div class="number">4.8⭐</div><div class="label">Google Rating</div></div>
+                <div class="stat"><div class="number">5yr</div><div class="label">Warranty</div></div>
+                <div class="stat"><div class="number">100%</div><div class="label">Dulux Paint</div></div>
+            </div>
+        </div>
+        
+        <h2 style="text-align:center;margin:50px 0 30px;color:#2c3e50;">Our Services</h2>
+        <div class="services">
+            <div class="service-card"><div class="emoji">🏠</div><h3>Interior Painting</h3><p>Complete interior painting for HDB, condo, and landed homes. Walls, ceilings, trim. Premium Dulux paint included.</p></div>
+            <div class="service-card"><div class="emoji">🏢</div><h3>Exterior Painting</h3><p>Weather-resistant exterior coating. Protects your home from Singapore's humidity. Long-lasting results.</p></div>
+            <div class="service-card"><div class="emoji">🚪</div><h3>Feature Walls</h3><p>Accent walls, textured finishes, feature wall designs. Transform any room with creative wall treatments.</p></div>
+            <div class="service-card"><div class="emoji">🏗️</div><h3>Full Repaint</h3><p>Complete home repaint including prep work. Patching, sanding, priming, painting. We handle everything.</p></div>
+        </div>
+        
+        <div class="pricing">
+            <h2>Transparent Pricing</h2>
+            <div class="pricing-card">
+                <div class="price">$280<span class="period">起</span></div>
+                <p style="color:#888;margin-top:5px;">Standard Room (Interior)</p>
+                <ul>
+                    <li>Premium Dulux paint</li>
+                    <li>2 coats included</li>
+                    <li>Free color consultation</li>
+                    <li>5-year warranty</li>
+                </ul>
+                <a href="https://wa.me/6583456789" class="cta-button whatsapp-btn" style="display:block;margin-top:20px;">Get Free Quote</a>
+            </div>
+        </div>
+        
+        <div style="text-align:center;margin:60px 0;">
+            <h2 style="color:#2c3e50;margin-bottom:20px;">What Our Customers Say</h2>
+            <div style="background:#f8f9fa;padding:30px;border-radius:16px;margin:20px 0;text-align:left;">
+                <p style="font-style:italic;color:#555;">"Super professional team! Painted my whole 4-room HDB in 3 days. No mess, great colors, and the price was fair. Highly recommend!"</p>
+                <p style="margin-top:10px;font-weight:bold;color:#3498db;">— Tan Family, Bishan</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contact">
+        <h2>Ready to Transform Your Home?</h2>
+        <p class="contact-info">📱 WhatsApp: +65 8345 6789</p>
+        <p class="contact-info">📞 Call: +65 8345 6789</p>
+        <p class="contact-info">🕐 Available 7 days, 8AM - 8PM</p>
+        <a href="https://wa.me/6583456789?text=Hi!%20I%27d%20like%20to%20get%20a%20painting%20quote" class="cta-button whatsapp-btn" style="margin-top:30px;">💬 Message Us on WhatsApp</a>
+    </div>
+    
+    <footer>
+        <p>Swift Paint Singapore | Professional Painting Services</p>
+        <p style="margin-top:10px;opacity:0.7;">Serving all over Singapore: Ang Mo Kio, Bedok, Bishan, Bukit Merah, Clementi, Geylang, Hougang, Jurong, Pasir Ris, Punggol, Sengkang, Tampines, Woodlands, Yishun & more</p>
+    </footer>
+</body>
+</html>
